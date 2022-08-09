@@ -226,7 +226,7 @@
                                             <ButtonLink
                                                 :link="
                                                     route(
-                                                        'admin.movies.index',
+                                                        'admin.movies.attach',
                                                         movie.id
                                                     )
                                                 "
