@@ -59,8 +59,7 @@ class GenreController extends Controller
                     if (!$genre) {
                         Genre::create([
                             'tmdb_id' => $tgenre['id'],
-                            'title' => $tgenre['name'],
-                            'slug' => Str::slug($tgenre['name'])
+                            'title' => $tgenre['name']
                         ]);
                     }
                 }

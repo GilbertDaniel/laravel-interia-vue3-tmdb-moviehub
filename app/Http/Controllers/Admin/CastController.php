@@ -62,7 +62,6 @@ class CastController extends Controller
             Cast::create([
                 'tmdb_id' => $tmdb_cast['id'],
                 'name'    => $tmdb_cast['name'],
-                'slug'    => Str::slug($tmdb_cast['name']),
                 'poster_path' => $tmdb_cast['profile_path']
             ]);
             return Redirect::back()->with('flash.banner', 'Cast created.');
