@@ -60,7 +60,6 @@ class TvShowController extends Controller
             TvShow::create([
                 'tmdb_id' => $tmdb_tv['id'],
                 'name'    => $tmdb_tv['name'],
-                'slug' => Str::slug($tmdb_tv['name']),
                 'poster_path' => $tmdb_tv['poster_path'],
                 'created_year' => $tmdb_tv['first_air_date']
             ]);
