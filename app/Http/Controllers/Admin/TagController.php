@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
+use App\Models\Tag;
 
 class TagController extends Controller
 {
@@ -15,7 +16,16 @@ class TagController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Tags/Index');
+        $perPage = Request::input('perPage') ?: 5;
+        return Inertia::render('Tags/Index', [
+            'tags' => Tag::query()
+                           ->when(Request::input('search'), function($query, $search) {
+                               $query->where('tag_name', 'like', "%{$search}%");
+                           })
+                           ->paginate($perPage)
+                           ->withQueryString(),
+            'filters' => Request::only(['search', 'perPage'])
+        ]);
     }
 
     /**
