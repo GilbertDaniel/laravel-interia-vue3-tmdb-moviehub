@@ -60,7 +60,7 @@
           bg-gray-700 bg-opacity-25
           text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('dashboard')"
       >
         <svg
           class="h-6 w-6"
