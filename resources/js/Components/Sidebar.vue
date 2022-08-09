@@ -60,7 +60,7 @@
           bg-gray-700 bg-opacity-25
           text-gray-100
         "
-        :href="route('dashboard')"
+        :href="route('admin.index')"
       >
         <svg
           class="h-6 w-6"
@@ -96,7 +96,7 @@
           text-gray-500
           hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('admin.movies.index')"
       >
         <svg
           class="h-6 w-6"
@@ -125,7 +125,7 @@
           text-gray-500
           hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('admin.tv-shows.index')"
       >
         <svg
           class="h-6 w-6"
@@ -154,7 +154,7 @@
           text-gray-500
           hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('admin.genres.index')"
       >
         <svg
           class="h-6 w-6"
@@ -183,7 +183,7 @@
           text-gray-500
           hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('admin.casts.index')"
       >
         <svg
           class="h-6 w-6"
@@ -212,7 +212,7 @@
           text-gray-500
           hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100
         "
-        :href="route('admin.index')"
+        :href="route('admin.tags.index')"
       >
         <svg
           class="h-6 w-6"
